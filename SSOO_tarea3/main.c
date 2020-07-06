@@ -24,6 +24,7 @@ int main()
     enqueue(&autos_norteSur, 4);
     enqueue(&autos_norteSur, 1);
     enqueue(&autos_norteSur, 7);
+    enqueue(&autos_norteSur, 9);
    
     for (int i=0; i<QUEUE_MAX_SIZE; i++){
          printf("posicion es %d, queue es %d\n", i, autos_norteSur.queue[i]);
@@ -32,7 +33,8 @@ int main()
     dequeue(&autos_norteSur);
     dequeue(&autos_norteSur);
     enqueue(&autos_norteSur, 2);
-    enqueue(&autos_norteSur, 9);
+    enqueue(&autos_norteSur, 10);
+    enqueue(&autos_norteSur, 22);
     
     for (int i=0; i<QUEUE_MAX_SIZE; i++){
          printf("posicion es %d, queue es %d\n", i, autos_norteSur.queue[i]);
