@@ -6,6 +6,7 @@
 
 #include "queue.h"
 #include <stdio.h>
+
 void init(queue_t* q)
 {
     for (int i=0; i<(QUEUE_MAX_SIZE); i++){
@@ -14,8 +15,6 @@ void init(queue_t* q)
     
     q->head = q->queue;
     q->tail = q->queue;
-    
-    
 }
 
 int enqueue(queue_t* q, int element){
@@ -59,4 +58,19 @@ int isFull(queue_t* q){
 
 int isEmpty(queue_t* q){
     return q->head == q->tail;
+}
+
+void display(queue_t* q){
+    if ( isEmpty(q) ){
+        printf("ERROR: queue is empty\n");
+        return;
+    }
+    
+    int *i = (q->head);
+    printf("Displaying:\n Head| ");
+    while (i <= (q->tail - 1)){
+        printf("%d ", *i++);
+    }
+    printf("|tail \n");
+    return;
 }

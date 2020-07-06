@@ -30,10 +30,9 @@ void init(queue_t*);
 int enqueue(queue_t*, int); //return int para corrección de errores
 int dequeue(queue_t*);
 int isFull(queue_t*);
-int isEmpty(queue_t*);    
+int isEmpty(queue_t*);
+void display(queue_t*);
     
-
-
 #ifdef __cplusplus
 }
 #endif
